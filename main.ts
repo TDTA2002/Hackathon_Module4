@@ -79,5 +79,11 @@ function addNewNote() {
 
 function handleDeleteNote(id: number) {
     notes.deleteNote(id);
-
+    const snackbar = document.getElementById("snackbardelete");
+    if (snackbar) {
+        snackbar.classList.add("show");
+        setTimeout(function () {
+            snackbar.classList.remove("show");
+        }, 2500);
+    }
 }
